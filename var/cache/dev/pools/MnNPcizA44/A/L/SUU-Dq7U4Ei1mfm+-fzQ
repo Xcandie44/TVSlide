@@ -1,0 +1,32 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Validator\\Constraints\\File'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\File')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'mimeTypes' => [
+                    [
+                        'video/*',
+                        'image/*',
+                    ],
+                ],
+                'mimeTypesMessage' => [
+                    'Please upload valid video or image file.',
+                ],
+                'groups' => [
+                    [
+                        'Default',
+                    ],
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+
+});

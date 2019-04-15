@@ -1,0 +1,16 @@
+{% extends '@SonataAdmin/CRUD/base_list_field.html.twig' %}
+
+{% block field%}
+
+    <div>
+        {% if object.isVideo %}
+            <video height="150px" width="250px" controls="controls">
+                <source src="{{ object.url|e }}" type="video/mp4">
+            </video>
+        {% else %}
+            <img class="img-lg" src="{{ object.url }}" />
+        {% endif %}
+
+
+    </div>
+{% endblock %}
